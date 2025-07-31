@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
-    />
+    >
     <link
       rel="preload"
       href="./public/0918e922d529c34d6871965d43a810618d656b8e.jpg"
       as="image"
-    />
+    >
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.add("loaded");
       });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
   <body>
     <div class="loading-overlay">
@@ -34,7 +36,7 @@
             src="./public/0918e922d529c34d6871965d43a810618d656b8e.jpg"
             alt="Profile photo"
             class="profile-photo"
-          />
+          >
         </div>
 
         <header class="header-info">
@@ -44,7 +46,7 @@
         </header>
 
         <section class="card languages">
-          <h2>Languages</h2>
+          <h2 class="editable">Languages</h2>
           <div class="language-item">
             <p class="editable">English</p>
             <div class="progress-bar">
@@ -68,7 +70,7 @@
 
       <div class="row">
         <section class="card education">
-          <h2>Education</h2>
+          <h2 class="editable">Education</h2>
           <div class="education-grid">
             <div class="education-item highlight-card">
               <p class="editable">2024</p>
@@ -97,7 +99,7 @@
 
         <div class="stack">
           <section class="card interests">
-            <h2>Interests</h2>
+            <h2 class="editable">Interests</h2>
             <div class="interests-grid">
               <span class="interest-tag editable">branding</span>
               <span class="interest-tag editable">brand identity</span>
@@ -126,27 +128,27 @@
 
       <div class="row">
         <section class="card tools">
-          <h2>Tools</h2>
+          <h2 class="editable">Tools</h2>
           <div class="tools-category">
             <h3 class="editable">design</h3>
             <div class="tools-grid">
               <div class="tool-icon">
-                <img src="./public/logoFigma.svg" class="logos" />
+                <img src="./public/logoFigma.svg" alt="Figma logo" class="logos">
               </div>
               <div class="tool-icon">
-                <img src="./public/logoCreativeCloud.svg" class="logos" />
+                <img src="./public/logoCreativeCloud.svg" alt="Adobe Creative Cloud logo" class="logos">
               </div>
               <div class="tool-icon">
-                <img src="./public/logoMiro.png" class="logos" />
+                <img src="./public/logoMiro.png" alt="Miro logo" class="logos">
               </div>
               <div class="tool-icon">
-                <img src="./public/logoNotion.svg" class="logos" />
+                <img src="./public/logoNotion.svg" alt="Notion logo" class="logos">
               </div>
               <div class="tool-icon">
-                <img src="./public/logoMeet.svg" class="logos" />
+                <img src="./public/logoMeet.svg" alt="Google Meet logo" class="logos">
               </div>
               <div class="tool-icon">
-                <img src="./public/logoanalytics.svg" class="logos" />
+                <img src="./public/logoanalytics.svg" alt="Google Analytics logo" class="logos">
               </div>
             </div>
           </div>
@@ -154,16 +156,16 @@
             <h3 class="editable">no-code</h3>
             <div class="tools-grid">
               <div class="tool-icon">
-                <img src="./public/logoZapìer 1.svg" class="logos" />
+                <img src="./public/logoZapìer 1.svg" alt="Zapier logo" class="logos">
               </div>
               <div class="tool-icon">
-                <img src="./public/logoWebflow.svg" class="logos" />
+                <img src="./public/logoWebflow.svg" alt="Webflow logo" class="logos">
               </div>
               <div class="tool-icon">
-                <img src="./public/logoFramer.svg" class="logos" />
+                <img src="./public/logoFramer.svg" alt="Framer logo" class="logos">
               </div>
               <div class="tool-icon">
-                <img src="./public/logoWordpress.svg" class="logos" />
+                <img src="./public/logoWordpress.svg" alt="Wordpress logo" class="logos">
               </div>
             </div>
           </div>
@@ -171,20 +173,20 @@
             <h3 class="editable">artificial intelligence</h3>
             <div class="tools-grid">
               <div class="tool-icon">
-                <img src="./public/logoChatGPT.png" class="logos" />
+                <img src="./public/logoChatGPT.png" alt="ChatGPT logo" class="logos">
               </div>
               <div class="tool-icon">
-                <img src="./public/logoCopilot.png" class="logos" />
+                <img src="./public/logoCopilot.png" alt="Copilot" class="logos">
               </div>
               <div class="tool-icon">
-                <img src="./public/logoMidjourney.png" class="logos" />
+                <img src="./public/logoMidjourney.png" alt="Midjourney" class="logos">
               </div>
             </div>
           </div>
         </section>
 
         <section class="card experience">
-          <h2>Experience</h2>
+          <h2 class="editable">Experience</h2>
           <article class="job highlight-job">
             <div class="job-header">
               <p class="company-info editable">Jul. 2023 - Ago. 2023</p>
@@ -252,18 +254,6 @@
         </section>
       </div>
     </div>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-      async
-      defer
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-      async
-      defer
-    ></script>
-
     <script src="./js/main.js"></script>
   </body>
 </html>
