@@ -1,13 +1,269 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>CV</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      href="./public/0918e922d529c34d6871965d43a810618d656b8e.jpg"
+      as="image"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.add("loaded");
+      });
+    </script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
+    <div class="loading-overlay">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <button id="download-pdf" class="download-button">Download PDF</button>
+
+    <div class="resume-container">
+      <div class="row">
+        <div class="card profile-photo-container">
+          <img
+            src="./public/0918e922d529c34d6871965d43a810618d656b8e.jpg"
+            alt="Profile photo"
+            class="profile-photo"
+          />
+        </div>
+
+        <header class="header-info">
+          <p class="editable">Hello 👋 I'm</p>
+          <h1 class="editable">Graham Hunt</h1>
+          <p class="specialty editable">Brand/Logo Designer</p>
+        </header>
+
+        <section class="card languages">
+          <h2>Languages</h2>
+          <div class="language-item">
+            <p class="editable">English</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="language-item">
+            <p class="editable">Spanish</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="language-item">
+            <p class="editable">French</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 50%"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="row">
+        <section class="card education">
+          <h2>Education</h2>
+          <div class="education-grid">
+            <div class="education-item highlight-card">
+              <p class="editable">2024</p>
+              <h3 class="editable">UX/UI</h3>
+              <p class="tags editable">
+                #UX #UI #research #DesignSystem #Agile #wireframing #figma #IA
+              </p>
+              <p class="editable">Neoland</p>
+            </div>
+            <div class="education-item">
+              <p class="editable">2022</p>
+              <h3 class="editable">Product designer</h3>
+              <p class="tags editable">
+                #analytics #research #prototype #wireframes
+              </p>
+              <p class="editable">Coursera</p>
+            </div>
+            <div class="education-item">
+              <p class="editable">2017-2021</p>
+              <h3 class="editable">Graphic design</h3>
+              <p class="tags editable">#branding #web #illustration #adobe</p>
+              <p class="editable">Cali Institute of the Arts</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="stack">
+          <section class="card interests">
+            <h2>Interests</h2>
+            <div class="interests-grid">
+              <span class="interest-tag editable">branding</span>
+              <span class="interest-tag editable">brand identity</span>
+              <span class="interest-tag editable">logo</span>
+              <span class="interest-tag editable">typography</span>
+              <span class="interest-tag editable">photography</span>
+              <span class="interest-tag editable">designing</span>
+              <span class="interest-tag editable">poster design</span>
+              <span class="interest-tag editable">research</span>
+              <span class="interest-tag editable">social networks</span>
+              <span class="interest-tag editable">illustration</span>
+            </div>
+          </section>
+
+          <section class="card contact-box">
+            <h2 class="editable">
+              Let's chat! I'm ready to work on exciting projects
+            </h2>
+            <p>
+              <span class="editable">ivann19bj@gmail.com</span> |
+              <span class="editable">+34 666 666 666</span>
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <div class="row">
+        <section class="card tools">
+          <h2>Tools</h2>
+          <div class="tools-category">
+            <h3 class="editable">design</h3>
+            <div class="tools-grid">
+              <div class="tool-icon">
+                <img src="./public/logoFigma.svg" class="logos" />
+              </div>
+              <div class="tool-icon">
+                <img src="./public/logoCreativeCloud.svg" class="logos" />
+              </div>
+              <div class="tool-icon">
+                <img src="./public/logoMiro.png" class="logos" />
+              </div>
+              <div class="tool-icon">
+                <img src="./public/logoNotion.svg" class="logos" />
+              </div>
+              <div class="tool-icon">
+                <img src="./public/logoMeet.svg" class="logos" />
+              </div>
+              <div class="tool-icon">
+                <img src="./public/logoanalytics.svg" class="logos" />
+              </div>
+            </div>
+          </div>
+          <div class="tools-category">
+            <h3 class="editable">no-code</h3>
+            <div class="tools-grid">
+              <div class="tool-icon">
+                <img src="./public/logoZapìer 1.svg" class="logos" />
+              </div>
+              <div class="tool-icon">
+                <img src="./public/logoWebflow.svg" class="logos" />
+              </div>
+              <div class="tool-icon">
+                <img src="./public/logoFramer.svg" class="logos" />
+              </div>
+              <div class="tool-icon">
+                <img src="./public/logoWordpress.svg" class="logos" />
+              </div>
+            </div>
+          </div>
+          <div class="tools-category">
+            <h3 class="editable">artificial intelligence</h3>
+            <div class="tools-grid">
+              <div class="tool-icon">
+                <img src="./public/logoChatGPT.png" class="logos" />
+              </div>
+              <div class="tool-icon">
+                <img src="./public/logoCopilot.png" class="logos" />
+              </div>
+              <div class="tool-icon">
+                <img src="./public/logoMidjourney.png" class="logos" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card experience">
+          <h2>Experience</h2>
+          <article class="job highlight-job">
+            <div class="job-header">
+              <p class="company-info editable">Jul. 2023 - Ago. 2023</p>
+              <div class="most-recent">most recent</div>
+            </div>
+            <div class="job-body">
+              <div class="job-info-left">
+                <h3 class="editable">Senior Graphic Designer</h3>
+                <p class="company-info editable">Pinnacle | Full-time</p>
+              </div>
+              <div class="job-info-right">
+                <ul class="editable">
+                  <li>
+                    Research and brainstorm various design ideas for content and
+                    marketing.
+                  </li>
+                  <li>
+                    Review the work submitted by Junior Designers and sharing
+                    feedback.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="job">
+            <p class="job-dates editable">Ene. 2021 - Jul. 2023</p>
+            <div class="job-body">
+              <div class="job-info-left">
+                <h3 class="editable">Graphic / Web designer</h3>
+                <p class="company-info editable">Double Square | Full-time</p>
+              </div>
+              <div class="job-info-right">
+                <ul class="editable">
+                  <li>
+                    Development of internal projects from scratch, product
+                    design of brands.
+                  </li>
+                  <li>Landing page, webapps and hybrid apps.</li>
+                  <li>
+                    Taking decisions with stakeholders for the future of
+                    products such as Beagle labs, myur...
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="job">
+            <p class="job-dates editable">Feb. 2021 - Jul. 2023</p>
+            <div class="job-body">
+              <div class="job-info-left">
+                <h3 class="editable">Graphic Designer</h3>
+                <p class="company-info editable">Freelance</p>
+              </div>
+              <div class="job-info-right">
+                <ul class="editable">
+                  <li>Visual design for Events, Brands and Products.</li>
+                  <li>Product design, Packaging Design</li>
+                  <li>Logo Design</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+      async
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+      async
+      defer
+    ></script>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
